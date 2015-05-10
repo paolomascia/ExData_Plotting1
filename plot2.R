@@ -16,7 +16,7 @@ DT.sub = subset(DT,as.Date(Date,"%d/%m/%Y")>='2007-02-01' & as.Date(Date,"%d/%m/
 
 dates<-strptime(paste(DT.sub$Date," ",DT.sub$Time), "%d/%m/%Y %H:%M:%S")
 
-DT.sub=DT.sub[,3:8]  
+DT.sub=DT.sub[,3:9]  
 DT.sub=data.frame(Date=dates,DT.sub)
 
 #Output to png file
@@ -26,7 +26,3 @@ lines(DT.sub$Date,DT.sub$Global_active_power)
 dev.off()
 
 cat("File plot2.png saved")
-
-#Output to display
-plot(DT.sub$Date,DT.sub$Global_active_power,type="n",xlab="",ylab="Global Active Power (kilowatts)")
-lines(DT.sub$Date,DT.sub$Global_active_power)

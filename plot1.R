@@ -20,6 +20,3 @@ hist(DT.sub$Global_active_power,main="Global Active Power",xlab="Global Active P
 dev.off()
 
 cat("File plot1.png saved")
-
-#Output to display
-hist(DT.sub$Global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",col=c("red"))
